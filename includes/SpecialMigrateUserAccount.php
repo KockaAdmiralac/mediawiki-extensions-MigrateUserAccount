@@ -292,7 +292,8 @@ class SpecialMigrateUserAccount extends SpecialPage {
 				'<div class="mua-token-details"><h3>' . $this->msg( 'migrateuseraccount-token-title',
 				$this->remoteUsername, '<code>' . $token . '</code>' )->parse() . '</h3><br />' .
 				$this->msg( 'migrateuseraccount-token-help',
-					$this->userMigrationService->getRemoteUrl( $this->remoteUsername ) )->parse() . '</div><br />'
+					$this->userMigrationService->getRemoteUrl( $this->remoteUsername ),
+					$token )->parse() . '</div><br />'
 			);
 
 			$desc = [
